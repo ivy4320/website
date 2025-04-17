@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="description" content="日本の暮らし・仕事・旅・自己成長の記録。">
+  <title>XIUOO | 二ホン日記</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="icon.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <section class="Logo">
+        <a href="index-jp.html"><img src="二ホン日記-Photoroom.png" alt="二ホン日記LOGO" width="213" height="120"></a>
+      </section>
+      <section class="Language">
+        <div class="language-dropdown">
+          <button id="languageToggle">日本語 ☰</button>
+          <div id="languageMenu" class="dropdown-content">
+            <a href="index.html" onclick="switchLanguage('台湾語')">台湾語</a>
+            <a href="index-jp.html" onclick="switchLanguage('日本語')">日本語</a>
+          </div>
+        </div>
+      </section>
+    </div>
+    <section class="Category">
+      <a href="Working holiday-jp.html">Working holiday</a>
+      <a href="Career history-jp.html">Career history</a>
+      <a href="Travel-jp.html">Travel</a>
+      <a href="Diary-jp.html">Diary</a>
+    </section>
+  </header>
+
+  <main class="main-content">
+    <div class="Photo">
+      <div class="img-container">
+        <img src="HP/ABOUT ME 7.jpg" alt="ABOUT ME">
+      </div>
+    </div>
+    <div class="Description">
+      <p>
+        台湾出身🍠🇹🇼<br>2017年に大学を卒業後、1年間のワーホリで日本へ渡りました。<br>帰国後も日本への思いが断ち切れず、再び日本での就職を選びました。<br>この道のりでは転職の悩みに直面し、何度も将来に迷いました。<br>旅の中には笑顔もあれば、涙もありました。<br>暗い時期もあったけれど、同時に祝うべき瞬間もたくさんありました。<br>そんな日々を記録に残したくて、<br>ウェブ制作を学び、このサイトに綴ることにしました➡️
+      </p>
+    </div>
+  </main>
+
+  <main class="main-travel">
+    <p>日本での暮らしも7年目。<br>四季折々の風景を少しずつ集めてきました。</p>
+    <div class="carousel-wrapper">
+        <button class="prev">&#10094;</button>  <!-- 左切換按鈕 -->
+        <div class="carousel">
+          <img src="HP/01.jpg" alt="Image 1" loading="lazy">
+          <img src="HP/02.jpg" alt="Image 2" loading="lazy">
+          <img src="HP/04.jpg" alt="Image 4" loading="lazy">
+          <img src="HP/05.jpg" alt="Image 5" loading="lazy">
+          <img src="HP/06.jpg" alt="Image 6" loading="lazy">
+          <img src="HP/07.jpg" alt="Image 7" loading="lazy">
+          <img src="HP/08.jpg" alt="Image 8" loading="lazy">
+          <img src="HP/09.jpg" alt="Image 9" loading="lazy">
+          <img src="HP/10.jpg" alt="Image 10" loading="lazy">
+          <img src="HP/11.jpg" alt="Image 11" loading="lazy">
+          <img src="HP/12.jpg" alt="Image 12" loading="lazy">
+          <img src="HP/13.jpg" alt="Image 13" loading="lazy">
+          <img src="HP/14.jpg" alt="Image 14" loading="lazy">
+          <img src="HP/15.jpg" alt="Image 15" loading="lazy">
+          <img src="HP/16.jpg" alt="Image 16" loading="lazy">
+          <img src="HP/19.jpg" alt="Image 19" loading="lazy">
+          <img src="HP/20.jpg" alt="Image 20" loading="lazy">
+          <img src="HP/21.jpg" alt="Image 21" loading="lazy">
+          <img src="HP/22.jpg" alt="Image 22" loading="lazy">
+          <img src="HP/23.jpg" alt="Image 23" loading="lazy">
+          <img src="HP/24.jpg" alt="Image 24" loading="lazy">
+          <img src="HP/26.jpg" alt="Image 26" loading="lazy">
+          <img src="HP/27.jpg" alt="Image 27" loading="lazy">
+          <img src="HP/01.jpg" alt="Image 1" loading="lazy">
+          <img src="HP/02.jpg" alt="Image 2" loading="lazy">
+          <img src="HP/04.jpg" alt="Image 4" loading="lazy">
+          <img src="HP/05.jpg" alt="Image 5" loading="lazy">
+          <img src="HP/06.jpg" alt="Image 6" loading="lazy">
+          <img src="HP/07.jpg" alt="Image 7" loading="lazy">
+          <img src="HP/08.jpg" alt="Image 8" loading="lazy">
+          <img src="HP/09.jpg" alt="Image 9" loading="lazy">
+          <img src="HP/10.jpg" alt="Image 10" loading="lazy">
+          <img src="HP/11.jpg" alt="Image 11" loading="lazy">
+          <img src="HP/12.jpg" alt="Image 12" loading="lazy">
+          <img src="HP/13.jpg" alt="Image 13" loading="lazy">
+          <img src="HP/14.jpg" alt="Image 14" loading="lazy">
+          <img src="HP/15.jpg" alt="Image 15" loading="lazy">
+          <img src="HP/16.jpg" alt="Image 16" loading="lazy">
+          <img src="HP/19.jpg" alt="Image 19" loading="lazy">
+          <img src="HP/20.jpg" alt="Image 20" loading="lazy">
+          <img src="HP/21.jpg" alt="Image 21" loading="lazy">
+          <img src="HP/22.jpg" alt="Image 22" loading="lazy">
+          <img src="HP/23.jpg" alt="Image 23" loading="lazy">
+          <img src="HP/24.jpg" alt="Image 24" loading="lazy">
+          <img src="HP/26.jpg" alt="Image 26" loading="lazy">
+        </div>
+        <button class="next">&#10095;</button>  <!-- 右切換按鈕 -->
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const carousel = document.querySelector('.carousel');
+  const prev = document.querySelector('.prev');
+  const next = document.querySelector('.next');
+
+  const scrollAmount = 300; // 可依圖片寬度調整
+
+  prev.addEventListener('click', () => {
+    if (carousel.scrollLeft <= 0) {
+      // 到最左邊時，跳到最右邊
+      carousel.scrollTo({ left: carousel.scrollWidth, behavior: 'smooth' });
+    } else {
+      carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    }
+  });
+
+  next.addEventListener('click', () => {
+    const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth;
+    if (carousel.scrollLeft >= maxScrollLeft) {
+      // 到最右邊時，跳回最左邊
+      carousel.scrollTo({ left: 0, behavior: 'smooth' });
+    } else {
+      carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  });
+  </script>
+
+
+<!-- 箭頭 -->
+<a href="#" id="back-to-top" class="back-to-top"><img src="箭頭-Photoroom.png" alt="箭頭" width="48px" height="48px"></a>
+  
+<script>
+  window.addEventListener("scroll", function() {
+      let backToTop = document.getElementById("back-to-top");
+      if (window.scrollY > 200) {  
+          backToTop.classList.add("show");
+      } else {
+          backToTop.classList.remove("show");
+      }
+  });
+</script>
+
+
+<footer>
+  <address>
+    <a href="mailto:ivy4320@yahoo.com.tw" target="_blank"><img src="mail-Photoroom.png" alt="MAIL" width="26" height="26"></a>
+    <a href="https://www.instagram.com/xiuoo_/" target="_blank" ><img src="IG-Photoroom.png" alt="IG" width="26" height="26"></a>
+  </address>
+  <small>(c) xiuoo_</small>
+</footer>
+
+<script>
+  const toggleBtn = document.getElementById("languageToggle");
+  const menu = document.getElementById("languageMenu");
+
+  toggleBtn.addEventListener("click", () => {
+    // 切換顯示狀態
+    menu.classList.toggle("show");
+  });
+
+  function switchLanguage(lang) {
+    document.getElementById("languageToggle").textContent = lang + " ☰";
+    menu.classList.remove("show");
+    // ✅ 若要切換語言實際導頁可在這裡加上：
+    // window.location.href = lang === '日本語' ? 'jp.html' : 'tw.html';
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XIUOO | DIARY</title>
+  <link rel="stylesheet" href="subpage-DIARY.css">
+  <link rel="icon" href="icon.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <section class="Logo">
+        <a href="index.html"><img src="二ホン日記-Photoroom.png" alt="二ホン日記LOGO" width="213" height="120"></a>
+      </section>
+      <section class="Language">
+        <div class="language-dropdown">
+          <button id="languageToggle">台湾語 ☰</button>
+          <div id="languageMenu" class="dropdown-content">
+            <a href="Diary.html" onclick="switchLanguage('台湾語')">台湾語</a>
+            <a href="Diary-jp.html" onclick="switchLanguage('日本語')">日本語</a>
+          </div>
+        </div>
+      </section>
+    </div>
+    <section class="Category">
+      <a href="Working holiday.html">Working holiday</a>
+      <a href="Career history.html">Career history</a>
+      <a href="Travel.html">Travel</a>
+      <a href="Diary.html">Diary</a>
+    </section>
+  </header>
+
+  <main class="main-content">
+    <div>
+      <section>
+        <a href="#">敬請期待♡</a>
+      </section>
+      <section>
+        <a href="#">敬請期待♡</a>
+      </section>
+      <section>
+        <a href="#">敬請期待♡</a>
+      </section>
+    </div>
+  </main>
+
+  <main class="main-category">
+    <section>
+      <a href="Working holiday.html">Working holiday</a>
+    </section>
+    <section>
+      <a href="Career history.html">Career history</a>
+    </section>
+    <section>
+      <a href="Travel.html">Travel</a>
+    </section>
+    <section>
+      <a href="Diary.html">Diary</a>
+    </section>
+  </main>
+
+  <!-- 箭頭 -->
+  <a href="#" id="back-to-top" class="back-to-top"><img src="箭頭-Photoroom.png" alt="箭頭" width="48px" height="48px"></a>
+  
+  <script>
+    window.addEventListener("scroll", function() {
+        let backToTop = document.getElementById("back-to-top");
+        if (window.scrollY > 200) {  
+            backToTop.classList.add("show");
+        } else {
+            backToTop.classList.remove("show");
+        }
+    });
+</script>
+
+  <footer>
+    <address>
+      <a href="mailto:ivy4320@yahoo.com.tw" target="_blank"><img src="mail-Photoroom.png" alt="MAIL" width="26" height="26"></a>
+      <a href="https://www.instagram.com/xiuoo_/" target="_blank" ><img src="IG-Photoroom.png" alt="IG" width="26" height="26"></a>
+    </address>
+    <small>(c) xiuoo_</small>
+  </footer>
+  
+  <script>
+    const toggleBtn = document.getElementById("languageToggle");
+    const menu = document.getElementById("languageMenu");
+  
+    toggleBtn.addEventListener("click", () => {
+      // 切換顯示狀態
+      menu.classList.toggle("show");
+    });
+  
+    function switchLanguage(lang) {
+      document.getElementById("languageToggle").textContent = lang + " ☰";
+      menu.classList.remove("show");
+      // ✅ 若要切換語言實際導頁可在這裡加上：
+      // window.location.href = lang === '日本語' ? 'jp.html' : 'tw.html';
+    }
+  </script>
+  
+</body>
+</html>

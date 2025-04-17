@@ -1,0 +1,381 @@
+@charset "utf-8";
+
+body {
+  font-family: 'Yomogi', sans-serif;
+  margin: 0;
+}
+
+/*header*/
+
+header{
+  background-color:rgb(248, 213, 176);
+  display: flex;
+  flex-direction: column; /* 讓 Category 會自動換行 */
+  align-items: center;
+}
+
+.top-bar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* 讓 Logo 置中，Language 靠右 */
+  position: relative;
+  padding: 24px 0;
+}
+
+.Logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); /* 讓 Logo 的中心對齊畫面中央 */
+}
+
+.Language {
+  margin-left: auto;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
+/* 包裹下拉與按鈕的容器 */
+.language-dropdown {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 1000;
+  padding: 24px 12px;
+  position: relative
+}
+
+/* 漢堡按鈕 */
+#languageToggle {
+  background: white;
+  color: rgb(114, 68, 18);
+  font-weight: bold;
+  font-size: 12px;
+  border: 2px solid rgb(114, 68, 18);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  min-width:60px;
+  padding: 2px 2px;
+
+}
+
+/* 下拉選單 */
+.dropdown-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  flex-direction: column;
+  position: absolute;
+  top: 67%;
+  right: 12px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  flex-direction: column;
+  min-width: 60px;
+}
+
+/* 展開狀態 */
+.dropdown-content.show {
+  max-height: 200px; /* 根據內容長度調整上限 */
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 2px;
+  font-size: 12px;
+  color: rgb(114, 68, 18);
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.dropdown-content a:hover {
+  background-color: rgb(248, 213, 176);
+  color: white;
+}
+
+.Category {
+  background-color:rgb(114, 68, 18);
+  width: 100%;
+  display: flex;
+  justify-content: center; /* 讓按鈕置中 */
+  gap: 20px; /* 設定間距 */
+}
+
+.Category a {
+  text-decoration: none;
+  color:#fff;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 8px 12px;
+}
+
+.Category a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+a:hover{
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 768px) {
+  .Category a {
+    font-size: 0.9rem;
+  }
+
+  .Language a {
+    font-size: 0.9rem;
+  }
+}
+
+/*main*/
+/*main-content*/
+
+.main-content{
+  background-color:rgb(248, 213, 176);
+  text-align: center;
+  padding: 24px 12px;
+}
+
+section p{
+  margin-bottom: 48px;
+  margin-top: 0;
+  text-align: center; 
+}
+
+section img{
+  border-radius: 5px;
+}
+
+/* 菜單內容 */
+.container{
+  text-align: center;
+}
+
+.content{
+  width: 100%;
+  display: none;
+}
+
+.menu{
+  list-style: none;
+  padding: 0;
+  margin:0;
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.menu li{
+  text-align: center;
+}
+
+.menu li a{
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+  padding: 8px 0;
+  color: rgb(114, 68, 18);
+  text-decoration: none;
+  border-radius: 5px 5px 0 0;
+}
+
+.menu li a.active{
+  background: #fff;
+}
+
+.menu li a:not(.active):hover {
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.content.active{
+  background: #fff;
+  display: block;
+  padding: 24px 0;
+  border-radius: 5px;
+}
+
+.content h3{
+  margin: 0;
+  padding: 0 12px;
+  font-size: 16px;
+  text-align: left;         /* 文字靠右對齊 */
+  display: flex;             /* 讓文字區塊能水平置中 */
+  justify-content: center;   /* 整段區塊置中 */
+  flex-direction: column;    /* 讓文字換行正常排列 */
+  align-items: first baseline;
+}
+
+.content p{
+  padding: 12px;
+  text-align: left;         /* 文字靠右對齊 */
+  display: flex;             /* 讓文字區塊能水平置中 */
+  justify-content: center;   /* 整段區塊置中 */
+  flex-direction: column;    /* 讓文字換行正常排列 */
+  align-items: first baseline;
+}
+
+.content section{
+  padding: 0 12px;
+}
+
+.hidden-content {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .content p {
+    text-align: left;         /* 文字靠右對齊 */
+    display: flex;             /* 讓文字區塊能水平置中 */
+    justify-content: center;   /* 整段區塊置中 */
+    flex-direction: column;    /* 讓文字換行正常排列 */
+    align-items: first baseline;     /* 讓每行文字靠右 */
+    font-size: 14px;  /* 或使用 1rem 看你排版 */
+    line-height: 1.6; /* 保持良好的可讀性 */
+  }
+
+  .main-content p{
+    font-size: 14px;  
+    line-height: 1.6; 
+  }
+
+  .container a{
+    font-size: 14px; 
+    line-height: 1.6;
+  }
+
+  ul li::after{
+    font-size: 12px; 
+    line-height: 1.6;
+  }
+
+  .read-more-btn{
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+
+.read-more-btn {
+  color: white;
+  background-color:rgb(114, 68, 18);
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  padding: 8px 24px;
+  border-radius: 5px;
+}
+
+.read-more-btn:hover {
+  background-color:rgba(114, 68, 18, 0.7);
+}
+
+.content ul{
+  list-style: none;
+  padding: 0 12px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.content li{
+  width: calc((100% - 32px) / 3);
+  box-sizing: border-box;
+  position: relative;
+}
+
+.content img{
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+ul li:hover img {
+  opacity: 0.8;
+  transform: scale(1.10);
+}
+
+ul li::after {
+  content: attr(data-text);
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%);
+  color: white;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+}
+
+ul li:hover::after {
+  opacity: 1;
+}
+
+
+/*main*/
+/*main-category*/
+
+.main-category{
+  background-color: #fff;
+  text-align: center;
+  padding: 24px;
+}
+
+.main-category a{
+  background-color:rgb(114, 68, 18) ;
+  color:#fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 24px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 12px;
+  width: 150px;
+}
+
+/* 箭頭 */
+
+.back-to-top{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  transition: opacity 0.3s;
+}
+
+.back-to-top.show {
+  display: block;
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .back-to-top {
+    width: 24px;
+    height: 24px;
+    right: 12px;
+    bottom: 12px;
+  }
+
+  .back-to-top img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/*footer*/
+
+footer{
+  text-align: center;
+  padding: 24px 0;
+}
+
+address{
+  margin-top: 16px;
+}
