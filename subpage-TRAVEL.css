@@ -162,7 +162,7 @@ h3 {
 
 /* 瀑布流 Masonry Grid */
 .masonry-grid {
-  column-count: 2;  /* 手機 2 欄 */
+  column-count: 3;  /* 手機 2 欄 */
   column-gap: 15px;
 }
 
