@@ -8,7 +8,7 @@ body {
 /*header*/
 
 header{
-  background-color:rgb(248, 213, 176);
+  background-color:rgb(255, 248, 232);
   display: flex;
   flex-direction: column; /* 讓 Category 會自動換行 */
   align-items: center;
@@ -134,11 +134,74 @@ a:hover{
   }
 }
 
+/*sidebar*/
+#sidebar {
+  position: fixed;
+  top: 350px; /* 距離上方 */
+  right: 0px; /* 距離左邊 */
+  width: 32px;
+  background-color: rgb(248, 213, 176);
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+  padding: 8px;
+  z-index: 9999;
+  border-radius: 8px;
+  opacity: 0.7;
+}
+
+#sidebar:hover {
+  opacity: 1;
+}
+
+#sidebar-header {
+  align-items: center;
+  font-weight: bold;
+  color: #674636;
+}
+
+#sidebar-header a{
+  text-decoration: none;
+  color: #674636;
+}
+
+#sidebar-header a:hover {
+  opacity: 1;
+}
+
+#close-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+  color: #674636;
+}
+
+#close-btn:hover {
+  color: #fff;
+}
+
+
+/* 打開按鈕的樣式可以另外美化 */
+#open-btn {
+  background-color: rgb(248, 213, 176);
+  padding: 8px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0.7;
+  border: none;
+}
+
+#open-btn:hover {
+  opacity: 1;
+}
+
+
 /*main*/
 /*main-content*/
 
 .main-content{
-  background-color:rgb(248, 213, 176);
+  background-color:rgb(255, 248, 232);
   text-align: center;
   padding: 24px 12px;
 }
@@ -268,7 +331,7 @@ section img{
   border: none;
   cursor: pointer;
   display: inline-block;
-  padding: 8px 24px;
+  padding: 4px 16px;
   border-radius: 5px;
 }
 
@@ -323,14 +386,14 @@ ul li:hover::after {
 /*main-category*/
 
 .main-category{
-  background-color: #fff;
+  background-color: rgb(255, 248, 232);
   text-align: center;
   padding: 24px;
 }
 
 .main-category a{
-  background-color:rgb(114, 68, 18) ;
-  color:#fff;
+  /* background-color:rgb(114, 68, 18) ; */
+  color:rgb(114, 68, 18);
   text-decoration: none;
   font-weight: bold;
   padding: 8px 24px;
@@ -374,6 +437,7 @@ ul li:hover::after {
 footer{
   text-align: center;
   padding: 24px 0;
+  background-color: rgb(255, 248, 232);
 }
 
 address{
