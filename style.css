@@ -8,7 +8,7 @@ body {
 /*header*/
 
 header{
-  background-color:rgb(248, 213, 176);
+  background-color:rgb(255, 248, 232);
   display: flex;
   flex-direction: column; /* 讓 Category 會自動換行 */
   align-items: center;
@@ -139,7 +139,7 @@ a:hover{
 /*main-content*/
 
 .main-content{
-  background-color:rgb(248, 213, 176);
+  background-color:rgb(255, 248, 232);
   text-align: center;
   padding:24px 12px;
   justify-items: center;
@@ -295,6 +295,7 @@ button {
 footer{
   text-align: center;
   padding: 24px 0;
+  background-color:rgb(255, 248, 232);
 }
 
 address{
