@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XIUOO | DIARY</title>
+  <link rel="stylesheet" href="subpage-diarycontent.css">
+  <link rel="icon" href="icon.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <section class="Logo">
+        <a href="index.html"><img src="二ホン日記-Photoroom.png" alt="二ホン日記LOGO" width="213" height="120"></a>
+      </section>
+      <section class="Language">
+        <div class="language-dropdown">
+          <button id="languageToggle">台湾語 ☰</button>
+          <div id="languageMenu" class="dropdown-content">
+            <a href="Diary.html" onclick="switchLanguage('台湾語')">台湾語</a>
+            <a href="Diary-jp.html" onclick="switchLanguage('日本語')">日本語</a>
+          </div>
+        </div>
+      </section>
+    </div>
+    <section class="Category">
+      <a href="Working holiday.html">Working holiday</a>
+      <a href="Career history.html">Career history</a>
+      <a href="Travel.html">Travel</a>
+      <a href="Diary.html">Diary</a>
+    </section>
+  </header>
+
+  <main class="main-content">
+    <div>
+      <section class="description">
+        <h3>――2022夏合宿</h3>
+        <p>入社半年，常常充實到好像吸收了三年濃縮的精華，一不注意一天又過去了，還有好多想學習的、想挑戰的、更想聽優秀的同事們的人生故事（時間慢點嘛🥹）</p>
+        <p>從一個月兩萬日幣的風水不佳小小辦公室經歷了幾次的遷移，到現能在舒服的在富士電視台隔壁的立派大樓裡包樓層辦公；從去年只有七名員工到現在翻倍又翻倍的擴大(除了崇拜還是只有崇拜)連我一名小弱雞看了都好感動(乾我？笑) 公司的故事聽了很多次XD但是如果可以好想再繼續聽下去🥰</p>
+        <p>合宿那天和好幾位不太有接觸的同事聊聊天、第一次和同事泡溫泉、第一次和日本人(其他國家)圍在一起聊天，社長問我：是第一次參加合宿活動嗎？我：對。</p>
+        <p>社長說他也很開心很感動，因為他沒想過會有這天。</p>
+        <p>雖然我只會傻笑，可是內心真的覺得自己很幸運是其中一員，我才沒想過會有這天呢～～🥹ありがとう…</p>
+      </section>
+      <section class="photo">
+        <p>神奇的一晚</p>
+        <img src="DIARY/diary05-1.jpg" alt="gasyuku1">
+        <p>2022.07.10✏️</p>
+      </section>
+    </div>
+  </main>
+
+  <main class="main-category">
+    <section>
+      <a href="index.html">Home</a>
+    </section>
+    <section>
+      <a href="Working holiday.html">Working holiday</a>
+    </section>
+    <section>
+      <a href="Career history.html">Career history</a>
+    </section>
+    <section>
+      <a href="Travel.html">Travel</a>
+    </section>
+    <section>
+      <a href="Diary.html">Diary</a>
+    </section>
+  </main>
+
+  <!-- 箭頭 -->
+  <a href="#" id="back-to-top" class="back-to-top"><img src="箭頭-Photoroom.png" alt="箭頭" width="48px" height="48px"></a>
+  
+  <script>
+    window.addEventListener("scroll", function() {
+        let backToTop = document.getElementById("back-to-top");
+        if (window.scrollY > 200) {  
+            backToTop.classList.add("show");
+        } else {
+            backToTop.classList.remove("show");
+        }
+    });
+</script>
+
+  <footer>
+    <address>
+      <a href="mailto:ivy4320@yahoo.com.tw" target="_blank"><img src="mail-Photoroom.png" alt="MAIL" width="26" height="26"></a>
+      <a href="https://www.instagram.com/xiuoo_/" target="_blank" ><img src="IG-Photoroom.png" alt="IG" width="26" height="26"></a>
+    </address>
+    <small>(c) xiuoo_</small>
+  </footer>
+  
+  <script>
+    const toggleBtn = document.getElementById("languageToggle");
+    const menu = document.getElementById("languageMenu");
+  
+    toggleBtn.addEventListener("click", () => {
+      // 切換顯示狀態
+      menu.classList.toggle("show");
+    });
+  
+    function switchLanguage(lang) {
+      document.getElementById("languageToggle").textContent = lang + " ☰";
+      menu.classList.remove("show");
+      // ✅ 若要切換語言實際導頁可在這裡加上：
+      // window.location.href = lang === '日本語' ? 'jp.html' : 'tw.html';
+    }
+  </script>
+  
+</body>
+</html>

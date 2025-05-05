@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XIUOO | DIARY</title>
+  <link rel="stylesheet" href="subpage-diarycontent.css">
+  <link rel="icon" href="icon.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <section class="Logo">
+        <a href="index-jp.html"><img src="二ホン日記-Photoroom.png" alt="二ホン日記LOGO" width="213" height="120"></a>
+      </section>
+      <section class="Language">
+        <div class="language-dropdown">
+          <button id="languageToggle">台湾語 ☰</button>
+          <div id="languageMenu" class="dropdown-content">
+            <a href="Diary.html" onclick="switchLanguage('台湾語')">台湾語</a>
+            <a href="Diary-jp.html" onclick="switchLanguage('日本語')">日本語</a>
+          </div>
+        </div>
+      </section>
+    </div>
+    <section class="Category">
+      <a href="Working holiday-jp.html">Working holiday</a>
+      <a href="Career history-jp.html">Career history</a>
+      <a href="Travel-jp.html">Travel</a>
+      <a href="Diary-jp.html">Diary</a>
+    </section>
+  </header>
+
+  <main class="main-content">
+    <div>
+      <section class="description">
+        <h3>――私の人生に千葉があってよかった</h3>
+        <p>部屋の日当たり、外から日の入りの景色、左上に見たら飛行機見えること、一人余裕ある二人心温まる空間、好きな音楽流れながら掃除したり、レイアウトしたり、好きな香りに部屋の隅々まで溢れて、すべてのことを自分の意識でやってきたの大好きだった。</p>
+        <p>休みとかよく外に出たから、あまり家にいる時間若干少ないけど、いつも帰り道にワクワクしたんだよね♡</p>
+        <p>強いて言うなら、部屋の一番明るいところにはよく落ち込んでたとこ、テーブル前には一番泣いてたとこだった。夜になると、不安な気持ちとか焦ったりしたんよね。辛いこと忘れるため、好きなことをやりながら、成長してきた気がした。</p>
+        <p>だけど隣さん夜中に騒音でうるさくて、朝から向こうマンションのお母さんからデカい声を聞こえること、近くの八百屋さんの呼び売りの声で自分が生きてるか！頑張ってるかという証明のいとつじゃないかなと思った。</p>
+        <p>この部屋が私のことすべて受け入れてくれた。文句とか人に言えないことも聞いてくれた。本当にありがとうございました。二年間半お世話になりました。これからも頑張ります🔥</p>
+      </section>
+      <section class="photo">
+        <p>20190509-20211027私の人生に千葉があってよかった。</p>
+        <img src="DIARY/diary03-1.jpg" alt="chiba1">
+        <img src="DIARY/diary03-2.jpg" alt="chiba2">
+        <img src="DIARY/diary03-3.jpg" alt="chiba3">
+        <img src="DIARY/diary03-4.jpg" alt="chiba4">
+        <img src="DIARY/diary03-5.jpg" alt="chiba5">
+        <img src="DIARY/diary03-6.jpg" alt="chiba6">
+        <img src="DIARY/diary03-7.jpg" alt="chiba7">
+        <img src="DIARY/diary03-8.jpg" alt="chiba8">
+        <img src="DIARY/diary03-9.jpg" alt="chiba9">
+        <img src="DIARY/diary03-10.jpg" alt="chiba10">
+        <p>2021.10.30✏️</p>
+      </section>
+    </div>
+  </main>
+
+  <main class="main-category">
+    <section>
+      <a href="index-jp.html">Home</a>
+    </section>
+    <section>
+      <a href="Working holiday-jp.html">Working holiday</a>
+    </section>
+    <section>
+      <a href="Career history-jp.html">Career history</a>
+    </section>
+    <section>
+      <a href="Travel-jp.html">Travel</a>
+    </section>
+    <section>
+      <a href="diary1-jp.html">Diary</a>
+    </section>
+  </main>
+
+  <!-- 箭頭 -->
+  <a href="#" id="back-to-top" class="back-to-top"><img src="箭頭-Photoroom.png" alt="箭頭" width="48px" height="48px"></a>
+  
+  <script>
+    window.addEventListener("scroll", function() {
+        let backToTop = document.getElementById("back-to-top");
+        if (window.scrollY > 200) {  
+            backToTop.classList.add("show");
+        } else {
+            backToTop.classList.remove("show");
+        }
+    });
+</script>
+
+  <footer>
+    <address>
+      <a href="mailto:ivy4320@yahoo.com.tw" target="_blank"><img src="mail-Photoroom.png" alt="MAIL" width="26" height="26"></a>
+      <a href="https://www.instagram.com/xiuoo_/" target="_blank" ><img src="IG-Photoroom.png" alt="IG" width="26" height="26"></a>
+    </address>
+    <small>(c) xiuoo_</small>
+  </footer>
+  
+  <script>
+    const toggleBtn = document.getElementById("languageToggle");
+    const menu = document.getElementById("languageMenu");
+  
+    toggleBtn.addEventListener("click", () => {
+      // 切換顯示狀態
+      menu.classList.toggle("show");
+    });
+  
+    function switchLanguage(lang) {
+      document.getElementById("languageToggle").textContent = lang + " ☰";
+      menu.classList.remove("show");
+      // ✅ 若要切換語言實際導頁可在這裡加上：
+      // window.location.href = lang === '日本語' ? 'jp.html' : 'tw.html';
+    }
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XIUOO | DIARY</title>
+  <link rel="stylesheet" href="subpage-diarycontent.css">
+  <link rel="icon" href="icon.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <section class="Logo">
+        <a href="index-jp.html"><img src="二ホン日記-Photoroom.png" alt="二ホン日記LOGO" width="213" height="120"></a>
+      </section>
+      <section class="Language">
+        <div class="language-dropdown">
+          <button id="languageToggle">台湾語 ☰</button>
+          <div id="languageMenu" class="dropdown-content">
+            <a href="Diary.html" onclick="switchLanguage('台湾語')">台湾語</a>
+            <a href="Diary-jp.html" onclick="switchLanguage('日本語')">日本語</a>
+          </div>
+        </div>
+      </section>
+    </div>
+    <section class="Category">
+      <a href="Working holiday-jp.html">Working holiday</a>
+      <a href="Career history-jp.html">Career history</a>
+      <a href="Travel-jp.html">Travel</a>
+      <a href="Diary-jp.html">Diary</a>
+    </section>
+  </header>
+
+  <main class="main-content">
+    <div>
+      <section class="description">
+        <h3>――3人の店長がくれた物語</h3>
+        <p>アウトレットで働いた2年間で、まったくタイプの違う3人の店長と出会って、それぞれから違う成長と勇気をもらいました。そして、その度に満たされる気持ちがどんどん大きくなっていった気がします。</p>
+        <p>A店長を一言で言えば、私が今まで出会った中で一番ストレートに物を言う、感情の起伏が私の10倍くらいある日本人（笑）。よくある「遠回しに優しく伝える日本人」とは全然違ってて、正直、彼女の言葉に傷ついたことも多かったです。でもある日、たぶん私があまりにもかわいそうに見えたのか、同僚が「一緒にご飯行こ」って誘ってくれて、上司に私のことを伝えてくれたみたいで、「大変だったね、気にしなくていいよ」なんて言ってくれて…まさに地獄の中の癒し。あの時期は本当に地獄みたいだったけど、敬語のレベルはめちゃくちゃ上がりました🥲</p>
+        <p>B店長はとにかく落ち着いていて、慎重で、何事も自分で背負おうとする方。そんな彼女と一緒に働くうちに、私は一歩一歩しっかり仕事を覚えるようになりました。前の店長の影響で自信を失って、「日本語を話すのが怖い、お客さんに変だと思われそう」と打ち明けたとき、彼女は何度も何度も励ましてくれました。最近もわざわざ連絡をくれて、「今度台湾に行ったら絶対会おうね」って…😭（正座して泣くしかない）</p>
+        <p>そしてC店長は、3人の中で一番自分らしくて、何でも挑戦してみるパワフルな方。私たち4人の距離を一気に縮めてくれた存在でもあります。プライベートなことでも時間を割いて相談に乗ってくれたり、何かやりたいことがあると、否定せずに「いいじゃん、やってみなよ！」って背中を押してくれた。ある時期、私がかなりネガティブになっていたときにも気づいてくれて、評価表に「あなたは必要とされている存在だよ！」って書いてくれて…。その後は、自分の別の強みを探して必死に頑張りました（でもやっぱりまだまだダメだな〜って思っちゃうけどね、はは）。</p>
+        <p>そして、C店長がくれた「大きなギフト」に気づきました。最後の評価で、自分でも予想していなかったような結果をもらって…。実は3月以降、私たちはもう同じ場所では働いてないんだけど、それでも最後までこんなに応援してくれて、認めてくれた。あんなに忙しい方なのに…本当に感謝しかない。</p>
+        <p>一時期、私は「言語の壁」を越えられないってずっと言ってて。その壁は高くて厚くて、相手にも自分にも腹が立って、「どんなに仲良くなっても、同じ国（言語）の人には敵わないのかも」って思った。でも今は思う。どんな国の人であっても、「努力・思いやり・本気」は、ちゃんと伝わる。空気を通してでも。</p>
+      </section>
+      <section class="photo">
+        <p>20210331outlet最後の出勤日。</p>
+        <img src="DIARY/diary02-1.jpg" alt="outlet1">
+        <img src="DIARY/diary02-2.jpg" alt="outlet2">
+        <img src="DIARY/diary02-3.jpg" alt="outlet3">
+        <p>2021.06.18✏️</p>
+      </section>
+    </div>
+  </main>
+
+  <main class="main-category">
+    <section>
+      <a href="index-jp.html">Home</a>
+    </section>
+    <section>
+      <a href="Working holiday-jp.html">Working holiday</a>
+    </section>
+    <section>
+      <a href="Career history-jp.html">Career history</a>
+    </section>
+    <section>
+      <a href="Travel-jp.html">Travel</a>
+    </section>
+    <section>
+      <a href="diary1-jp.html">Diary</a>
+    </section>
+  </main>
+
+  <!-- 箭頭 -->
+  <a href="#" id="back-to-top" class="back-to-top"><img src="箭頭-Photoroom.png" alt="箭頭" width="48px" height="48px"></a>
+  
+  <script>
+    window.addEventListener("scroll", function() {
+        let backToTop = document.getElementById("back-to-top");
+        if (window.scrollY > 200) {  
+            backToTop.classList.add("show");
+        } else {
+            backToTop.classList.remove("show");
+        }
+    });
+</script>
+
+  <footer>
+    <address>
+      <a href="mailto:ivy4320@yahoo.com.tw" target="_blank"><img src="mail-Photoroom.png" alt="MAIL" width="26" height="26"></a>
+      <a href="https://www.instagram.com/xiuoo_/" target="_blank" ><img src="IG-Photoroom.png" alt="IG" width="26" height="26"></a>
+    </address>
+    <small>(c) xiuoo_</small>
+  </footer>
+  
+  <script>
+    const toggleBtn = document.getElementById("languageToggle");
+    const menu = document.getElementById("languageMenu");
+  
+    toggleBtn.addEventListener("click", () => {
+      // 切換顯示狀態
+      menu.classList.toggle("show");
+    });
+  
+    function switchLanguage(lang) {
+      document.getElementById("languageToggle").textContent = lang + " ☰";
+      menu.classList.remove("show");
+      // ✅ 若要切換語言實際導頁可在這裡加上：
+      // window.location.href = lang === '日本語' ? 'jp.html' : 'tw.html';
+    }
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XIUOO | DIARY</title>
+  <link rel="stylesheet" href="subpage-diarycontent.css">
+  <link rel="icon" href="icon.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <section class="Logo">
+        <a href="index-jp.html"><img src="二ホン日記-Photoroom.png" alt="二ホン日記LOGO" width="213" height="120"></a>
+      </section>
+      <section class="Language">
+        <div class="language-dropdown">
+          <button id="languageToggle">台湾語 ☰</button>
+          <div id="languageMenu" class="dropdown-content">
+            <a href="Diary.html" onclick="switchLanguage('台湾語')">台湾語</a>
+            <a href="Diary-jp.html" onclick="switchLanguage('日本語')">日本語</a>
+          </div>
+        </div>
+      </section>
+    </div>
+    <section class="Category">
+      <a href="Working holiday-jp.html">Working holiday</a>
+      <a href="Career history-jp.html">Career history</a>
+      <a href="Travel-jp.html">Travel</a>
+      <a href="Diary-jp.html">Diary</a>
+    </section>
+  </header>
+
+  <main class="main-content">
+    <div>
+      <section class="description">
+        <h3>――1週間のベジタリアン生活</h3>
+        <p>日本でベジタリアン生活って、けっこう大変だな～って気づいたよ。台湾みたいにベジメニューが当たり前にあるレストランは少ないし（しかも台湾のは美味しい！）、日本では自炊しない限り、思いつくのはコンビニのサラダくらい…。ある日なんて、駅の売店で「サラダ弁当」って書いてあったから買ったら、がっつりチキンソースがかかってたよね🙃</p>
+        <p>体にはこれといって大きな変化はなかったかな（まぁ1週間だけだし🤣）。でもすぐお腹が空いて、夕飯食べたあとすぐお菓子が食べたくなっちゃう（いつものことだけど）。7日＋1日はあっという間だったけど、最初の2日間の空腹はなかなかツラかった…！</p>
+        <p>ベジ生活を始めた理由は、年末に転職の願掛けで神様にお願いしたから。「ちゃんとお礼するから！」って言ったのに、後で「やっぱり1週間だけでいいですか？」って神様に交渉しちゃった（笑）全部自分ルールで進めてるところが、ほんと自分らしいって思う笑笑。</p>
+        <p>この半年間、転んでは立ち上がりを繰り返して、小心者な私はもうボロボロの状態で、自分のことを「小さなホコリみたい…存在感ないし、周りをむしろ不快にさせるだけじゃない？」って思ってたくらい（泣）知ってる友達も、きっと私の進退に「？？？」ってなってたよね（顔面隠し）一時期、本気で無理すぎて、大腿筋つねりながら泣いて飛行機チケット取ろうとしてた…！</p>
+        <p>でも、負けず嫌いでひねくれ者な私の中の因子たちが「そんな自分は認めない！」って言ってきて、とにかく転んでは起き、転んでは起き。今回の経験を経て、「あ、私って実はけっこう頑固で粘り強いんだな」って、自分に対する見方も少し変わったよ（どん！）</p>
+        <p>そして最後の最後、本当に見えない力が背中を押してくれた気がして、新しい目標が見つかったんだ🐯ちょっと笑っちゃう話だけど、行き詰まって神頼みしかない状況だったんだよね。ありがとう、神様…！</p>
+      </section>
+      <section class="photo">
+        <p>お願いした神社は写真の神社じゃありません～</p>
+        <img src="DIARY/diary04-1.jpg" alt="vegatble1">
+        <p>2022.01.18✏️</p>
+      </section>
+    </div>
+  </main>
+
+  <main class="main-category">
+    <section>
+      <a href="index-jp.html">Home</a>
+    </section>
+    <section>
+      <a href="Working holiday-jp.html">Working holiday</a>
+    </section>
+    <section>
+      <a href="Career history-jp.html">Career history</a>
+    </section>
+    <section>
+      <a href="Travel-jp.html">Travel</a>
+    </section>
+    <section>
+      <a href="diary1-jp.html">Diary</a>
+    </section>
+  </main>
+
+  <!-- 箭頭 -->
+  <a href="#" id="back-to-top" class="back-to-top"><img src="箭頭-Photoroom.png" alt="箭頭" width="48px" height="48px"></a>
+  
+  <script>
+    window.addEventListener("scroll", function() {
+        let backToTop = document.getElementById("back-to-top");
+        if (window.scrollY > 200) {  
+            backToTop.classList.add("show");
+        } else {
+            backToTop.classList.remove("show");
+        }
+    });
+</script>
+
+  <footer>
+    <address>
+      <a href="mailto:ivy4320@yahoo.com.tw" target="_blank"><img src="mail-Photoroom.png" alt="MAIL" width="26" height="26"></a>
+      <a href="https://www.instagram.com/xiuoo_/" target="_blank" ><img src="IG-Photoroom.png" alt="IG" width="26" height="26"></a>
+    </address>
+    <small>(c) xiuoo_</small>
+  </footer>
+  
+  <script>
+    const toggleBtn = document.getElementById("languageToggle");
+    const menu = document.getElementById("languageMenu");
+  
+    toggleBtn.addEventListener("click", () => {
+      // 切換顯示狀態
+      menu.classList.toggle("show");
+    });
+  
+    function switchLanguage(lang) {
+      document.getElementById("languageToggle").textContent = lang + " ☰";
+      menu.classList.remove("show");
+      // ✅ 若要切換語言實際導頁可在這裡加上：
+      // window.location.href = lang === '日本語' ? 'jp.html' : 'tw.html';
+    }
+  </script>
+  
+</body>
+</html>

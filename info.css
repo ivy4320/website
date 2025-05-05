@@ -1,0 +1,176 @@
+@charset "utf-8";
+
+body {
+  font-family: 'Yomogi', sans-serif;
+  margin: 0;
+}
+
+/*header*/
+
+header{
+  background-color:rgb(255, 248, 232);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid rgb(114, 68, 18);
+  
+}
+
+.Logo {
+  padding:0 12px;
+}
+
+.Category {
+  display: flex;
+  justify-content: flex-end;
+  gap: 40px; /* 設定間距 */
+  padding: 0 12px;
+}
+
+.Category a {
+  text-decoration: none;
+  color:rgb(114, 68, 18);
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.Category a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+a:hover{
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 768px) {
+  .Category a {
+    font-size: 0.9rem;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .Category{
+    padding: 0 12px;
+    padding-bottom: 48px;
+  }
+
+  header {
+    flex-direction: column; /* 主軸改為垂直排列 */
+    align-items: center; 
+    padding: 0 ;
+  }
+
+  .Logo{
+    padding: 0 12px;
+  }
+}
+
+
+/*main*/
+/*main-content*/
+
+.main-content{
+  background-color:rgb(255, 248, 232);
+  text-align: left;
+  padding:24px 12px;
+  justify-items: center;
+  align-items: center;
+  border-bottom: 2px solid rgb(114, 68, 18);
+}
+
+h2{
+  color:rgb(114, 68, 18);
+}
+
+
+ul {
+  list-style: none; /* 取消預設黑點 */
+  margin: 0 auto;
+  padding: 0;
+  max-width: 800px;
+}
+
+li{
+  background-color: rgb(248, 213, 176);
+  color:rgb(114, 68, 18);
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 5px;
+  margin-top:48px;
+}
+
+.add-info{
+  font-size: 12px;
+  padding-top: 24px;
+  max-width: 800px;
+}
+
+@media screen and (min-width: 768px) {
+  .main-content {
+    justify-content: center;
+  }
+}
+
+/*main*/
+/*main-category*/
+
+.main-category{
+  background-color: rgb(255, 248, 232);
+  text-align: center;
+  padding: 24px;
+}
+
+.main-category a{
+  /* background-color:rgb(114, 68, 18) ; */
+  color:rgb(114, 68, 18);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 24px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 12px;
+  width: 150px;
+}
+
+/* 箭頭 */
+
+.back-to-top{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  transition: opacity 0.3s;
+}
+
+.back-to-top.show {
+  display: block;
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .back-to-top {
+    width: 24px;
+    height: 24px;
+    right: 12px;
+    bottom: 12px;
+  }
+
+  .back-to-top img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/*footer*/
+
+footer{
+  text-align: center;
+  padding: 24px 0;
+  background-color:rgb(255, 248, 232);
+}
+
+address{
+  margin-top: 16px;
+}
+

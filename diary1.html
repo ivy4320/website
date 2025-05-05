@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XIUOO | DIARY</title>
+  <link rel="stylesheet" href="subpage-diarycontent.css">
+  <link rel="icon" href="icon.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <section class="Logo">
+        <a href="index.html"><img src="二ホン日記-Photoroom.png" alt="二ホン日記LOGO" width="213" height="120"></a>
+      </section>
+      <section class="Language">
+        <div class="language-dropdown">
+          <button id="languageToggle">台湾語 ☰</button>
+          <div id="languageMenu" class="dropdown-content">
+            <a href="Diary.html" onclick="switchLanguage('台湾語')">台湾語</a>
+            <a href="Diary-jp.html" onclick="switchLanguage('日本語')">日本語</a>
+          </div>
+        </div>
+      </section>
+    </div>
+    <section class="Category">
+      <a href="Working holiday.html">Working holiday</a>
+      <a href="Career history.html">Career history</a>
+      <a href="Travel.html">Travel</a>
+      <a href="Diary.html">Diary</a>
+    </section>
+  </header>
+
+  <main class="main-content">
+    <div>
+      <section class="description">
+        <h3>――「目前遇到最挫折的事情是什麼？」</h3>
+        <p>最近被問好多遍，腦中閃過好多好多好多小故事，但我都統一說打工度假的那一年(笑)</p>
+        <p>打工度假的剛開始，只有N3程度的我沒辦法把學到的日文使用在會話當中，別人講什麼都覺得好快，也沒有辦法好好表達自己的想法，造成場面尷尬或是一笑置之的情況又多又悲劇。</p>
+        <p>努力加強能力去了短期語言學校，即使得到N2之後在職場上還是會因為使用的文法或是詞彙錯誤可能造成誤會，不被理解、很難融入到他們的內心去。</p>
+        <p>到了現在努力得到看似很神聖的入場券後卻前進不了，經驗不足、忠誠度低等等而被淘汰，也不想替自己的決定負責，又害怕停在原地打轉而反覆糾結。</p>
+        <p>力不從心的時候常常有，還是會想偷懶 還是會抱怨 看見別人的努力反而變得怯步。</p>
+        <p>休息一下下根本沒關係，相信挫折會帶往更好的方向前進，當下大罵三字經一下就好了，真的(笑)。</p>
+      </section>
+      <section class="photo">
+        <img src="DIARY/diary01-1.jpg" alt="tomare1">
+        <p>2021.06.15✏️</p>
+      </section>
+    </div>
+  </main>
+
+  <main class="main-category">
+    <section>
+      <a href="index.html">Home</a>
+    </section>
+    <section>
+      <a href="Working holiday.html">Working holiday</a>
+    </section>
+    <section>
+      <a href="Career history.html">Career history</a>
+    </section>
+    <section>
+      <a href="Travel.html">Travel</a>
+    </section>
+    <section>
+      <a href="Diary.html">Diary</a>
+    </section>
+  </main>
+
+  <!-- 箭頭 -->
+  <a href="#" id="back-to-top" class="back-to-top"><img src="箭頭-Photoroom.png" alt="箭頭" width="48px" height="48px"></a>
+  
+  <script>
+    window.addEventListener("scroll", function() {
+        let backToTop = document.getElementById("back-to-top");
+        if (window.scrollY > 200) {  
+            backToTop.classList.add("show");
+        } else {
+            backToTop.classList.remove("show");
+        }
+    });
+</script>
+
+  <footer>
+    <address>
+      <a href="mailto:ivy4320@yahoo.com.tw" target="_blank"><img src="mail-Photoroom.png" alt="MAIL" width="26" height="26"></a>
+      <a href="https://www.instagram.com/xiuoo_/" target="_blank" ><img src="IG-Photoroom.png" alt="IG" width="26" height="26"></a>
+    </address>
+    <small>(c) xiuoo_</small>
+  </footer>
+  
+  <script>
+    const toggleBtn = document.getElementById("languageToggle");
+    const menu = document.getElementById("languageMenu");
+  
+    toggleBtn.addEventListener("click", () => {
+      // 切換顯示狀態
+      menu.classList.toggle("show");
+    });
+  
+    function switchLanguage(lang) {
+      document.getElementById("languageToggle").textContent = lang + " ☰";
+      menu.classList.remove("show");
+      // ✅ 若要切換語言實際導頁可在這裡加上：
+      // window.location.href = lang === '日本語' ? 'jp.html' : 'tw.html';
+    }
+  </script>
+  
+</body>
+</html>

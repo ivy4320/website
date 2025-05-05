@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XIUOO | DIARY</title>
+  <link rel="stylesheet" href="subpage-diarycontent.css">
+  <link rel="icon" href="icon.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <section class="Logo">
+        <a href="index.html"><img src="二ホン日記-Photoroom.png" alt="二ホン日記LOGO" width="213" height="120"></a>
+      </section>
+      <section class="Language">
+        <div class="language-dropdown">
+          <button id="languageToggle">台湾語 ☰</button>
+          <div id="languageMenu" class="dropdown-content">
+            <a href="Diary.html" onclick="switchLanguage('台湾語')">台湾語</a>
+            <a href="Diary-jp.html" onclick="switchLanguage('日本語')">日本語</a>
+          </div>
+        </div>
+      </section>
+    </div>
+    <section class="Category">
+      <a href="Working holiday.html">Working holiday</a>
+      <a href="Career history.html">Career history</a>
+      <a href="Travel.html">Travel</a>
+      <a href="Diary.html">Diary</a>
+    </section>
+  </header>
+
+  <main class="main-content">
+    <div>
+      <section class="description">
+        <h3>――3位店長帶給我的故事</h3>
+        <p>在outlet上班兩年來我遇到了3位截～然不同個性的店長，帶給我不同的成長和勇氣，而且一次比一次還要滿。</p>
+        <p>簡單形容A店長，她是我見過講話最直接情緒轉折比我大10倍的日本人，不是各位印象中的那種講話委婉拐彎十八角。常常因為她的話感到受傷。有次有一位同事，可能看我很可憐😆下班約我聊天放鬆，跟我說有幫我反應上司，說辛苦了呀不要在意等等的地獄程度。但那個時期是我敬語進步最多的時期🥲</p>
+        <p>B店長則是非常穩重和謹慎，不管什麼事情她都會扛下來的那種。跟著她的腳步踏踏實實的工作，因為前店長的關係我極度沒自信，跟她說我不敢講日文我覺得客人會覺得很奇怪，但她一次又一次的鼓勵我。前陣子還主動聯絡我，跟我要聯絡方式說之後來台灣玩一定要找我😭（歐買尬我還不下跪哭）</p>
+        <p>再來C店長是三人裡最做自己瘋狂挑戰極限，也拉近我們四個人彼此距離的店長，儘管是私事也願意花時間相談，不管想做什麼事都不會一口反對，反而給了很大的空間發揮自己的能力。有一陣子我變得很消極，她也注意到了，在考核的單字上寫了：妳是被需要的存在哦！然後接下來的時間我找了其他方為自己努力加分（雖然我還是覺得自己超廢哈哈）</p>
+        <p>然後呀今天才發現C店長送了我一份大禮，在最後的考核裡竟然得到連自己都沒想到的成績。其實三月之後我們都離開了同個地方，但最後還是這麼幫助我給我肯定。她明明就超級無敵忙！</p>
+        <p>有陣子我都說我跨不出去「語言隔閡」這道牆，又高又厚，我氣他們也氣自己，是不是再怎麼關係要好都還是好不過相同國家（語言）的人。不過我知道了，不管是什麼國家的人，努力、付出、真心都是可以傳達給對方的，從空氣中。</p>
+      </section>
+      <section class="photo">
+        <p>20210331最後一天outlet出勤日。</p>
+        <img src="DIARY/diary02-1.jpg" alt="outlet1">
+        <img src="DIARY/diary02-2.jpg" alt="outlet2">
+        <img src="DIARY/diary02-3.jpg" alt="outlet3">
+        <p>2021.06.18✏️</p>
+      </section>
+    </div>
+  </main>
+
+  <main class="main-category">
+    <section>
+      <a href="index.html">Home</a>
+    </section>
+    <section>
+      <a href="Working holiday.html">Working holiday</a>
+    </section>
+    <section>
+      <a href="Career history.html">Career history</a>
+    </section>
+    <section>
+      <a href="Travel.html">Travel</a>
+    </section>
+    <section>
+      <a href="Diary.html">Diary</a>
+    </section>
+  </main>
+
+  <!-- 箭頭 -->
+  <a href="#" id="back-to-top" class="back-to-top"><img src="箭頭-Photoroom.png" alt="箭頭" width="48px" height="48px"></a>
+  
+  <script>
+    window.addEventListener("scroll", function() {
+        let backToTop = document.getElementById("back-to-top");
+        if (window.scrollY > 200) {  
+            backToTop.classList.add("show");
+        } else {
+            backToTop.classList.remove("show");
+        }
+    });
+</script>
+
+  <footer>
+    <address>
+      <a href="mailto:ivy4320@yahoo.com.tw" target="_blank"><img src="mail-Photoroom.png" alt="MAIL" width="26" height="26"></a>
+      <a href="https://www.instagram.com/xiuoo_/" target="_blank" ><img src="IG-Photoroom.png" alt="IG" width="26" height="26"></a>
+    </address>
+    <small>(c) xiuoo_</small>
+  </footer>
+  
+  <script>
+    const toggleBtn = document.getElementById("languageToggle");
+    const menu = document.getElementById("languageMenu");
+  
+    toggleBtn.addEventListener("click", () => {
+      // 切換顯示狀態
+      menu.classList.toggle("show");
+    });
+  
+    function switchLanguage(lang) {
+      document.getElementById("languageToggle").textContent = lang + " ☰";
+      menu.classList.remove("show");
+      // ✅ 若要切換語言實際導頁可在這裡加上：
+      // window.location.href = lang === '日本語' ? 'jp.html' : 'tw.html';
+    }
+  </script>
+  
+</body>
+</html>

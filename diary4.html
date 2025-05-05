@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XIUOO | DIARY</title>
+  <link rel="stylesheet" href="subpage-diarycontent.css">
+  <link rel="icon" href="icon.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <section class="Logo">
+        <a href="index.html"><img src="二ホン日記-Photoroom.png" alt="二ホン日記LOGO" width="213" height="120"></a>
+      </section>
+      <section class="Language">
+        <div class="language-dropdown">
+          <button id="languageToggle">台湾語 ☰</button>
+          <div id="languageMenu" class="dropdown-content">
+            <a href="Diary.html" onclick="switchLanguage('台湾語')">台湾語</a>
+            <a href="Diary-jp.html" onclick="switchLanguage('日本語')">日本語</a>
+          </div>
+        </div>
+      </section>
+    </div>
+    <section class="Category">
+      <a href="Working holiday.html">Working holiday</a>
+      <a href="Career history.html">Career history</a>
+      <a href="Travel.html">Travel</a>
+      <a href="Diary.html">Diary</a>
+    </section>
+  </header>
+
+  <main class="main-content">
+    <div>
+      <section class="description">
+        <h3>――為期一週素食生活</h3>
+        <p>我發現在日本吃素不簡單耶～因爲不像台灣這麼盛行餐廳還有素食菜單（還很好吃）日本的話除非自己料理不然我想得到的只有便利商店的沙拉（某天我在餐車買了「沙拉」便當，結果上面竟然淋滿雞肉醬呢啃🙃）</p>
+        <p>身體沒有明顯的變化（也才一週🤣）倒是很容易餓吃完晚餐就立馬想吃零食（雖然平時也是）7+1天一下就過了～但前兩天實在痛苦餓的時候也是。</p>
+        <p>吃素的理由是因為年底轉職，向神明許了願，怕還不起還跟神明商量變一個禮拜（笑翻）整個許願裡規則都我在定哈哈哈哈哈哈哈哈。</p>
+        <p>大半年的時間跌跌撞撞小心臟碎的殘破不堪，覺得自己就像一粒灰又渺小又讓人過敏，知道的好朋友應該也對我的去留看得一頭霧水（遮臉）一度堅持不下去捏著自己大腿邊哭邊訂機票呢！但不服輸與叛逆因子瞧不起這樣的自己，總之跌了又起跌了又起，經過這次的經驗我也是對自己的固執和倔強再次改觀（拍胸膛）</p>
+        <p>然後在最後可能真的有一股我看不見的力量推了一把，讓我找到新目標了🐯雖然想起來很搞笑，不過就是求助無門只能求神，阿里阿多！</p>
+      </section>
+      <section class="photo">
+        <p>許願的神社不是圖中的神社～</p>
+        <img src="DIARY/diary04-1.jpg" alt="vegatble1">
+        <p>2022.01.18✏️</p>
+      </section>
+    </div>
+  </main>
+
+  <main class="main-category">
+    <section>
+      <a href="index.html">Home</a>
+    </section>
+    <section>
+      <a href="Working holiday.html">Working holiday</a>
+    </section>
+    <section>
+      <a href="Career history.html">Career history</a>
+    </section>
+    <section>
+      <a href="Travel.html">Travel</a>
+    </section>
+    <section>
+      <a href="Diary.html">Diary</a>
+    </section>
+  </main>
+
+  <!-- 箭頭 -->
+  <a href="#" id="back-to-top" class="back-to-top"><img src="箭頭-Photoroom.png" alt="箭頭" width="48px" height="48px"></a>
+  
+  <script>
+    window.addEventListener("scroll", function() {
+        let backToTop = document.getElementById("back-to-top");
+        if (window.scrollY > 200) {  
+            backToTop.classList.add("show");
+        } else {
+            backToTop.classList.remove("show");
+        }
+    });
+</script>
+
+  <footer>
+    <address>
+      <a href="mailto:ivy4320@yahoo.com.tw" target="_blank"><img src="mail-Photoroom.png" alt="MAIL" width="26" height="26"></a>
+      <a href="https://www.instagram.com/xiuoo_/" target="_blank" ><img src="IG-Photoroom.png" alt="IG" width="26" height="26"></a>
+    </address>
+    <small>(c) xiuoo_</small>
+  </footer>
+  
+  <script>
+    const toggleBtn = document.getElementById("languageToggle");
+    const menu = document.getElementById("languageMenu");
+  
+    toggleBtn.addEventListener("click", () => {
+      // 切換顯示狀態
+      menu.classList.toggle("show");
+    });
+  
+    function switchLanguage(lang) {
+      document.getElementById("languageToggle").textContent = lang + " ☰";
+      menu.classList.remove("show");
+      // ✅ 若要切換語言實際導頁可在這裡加上：
+      // window.location.href = lang === '日本語' ? 'jp.html' : 'tw.html';
+    }
+  </script>
+  
+</body>
+</html>

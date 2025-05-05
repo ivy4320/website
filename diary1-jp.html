@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XIUOO | DIARY</title>
+  <link rel="stylesheet" href="subpage-diarycontent.css">
+  <link rel="icon" href="icon.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <section class="Logo">
+        <a href="index-jp.html"><img src="二ホン日記-Photoroom.png" alt="二ホン日記LOGO" width="213" height="120"></a>
+      </section>
+      <section class="Language">
+        <div class="language-dropdown">
+          <button id="languageToggle">台湾語 ☰</button>
+          <div id="languageMenu" class="dropdown-content">
+            <a href="Diary.html" onclick="switchLanguage('台湾語')">台湾語</a>
+            <a href="Diary-jp.html" onclick="switchLanguage('日本語')">日本語</a>
+          </div>
+        </div>
+      </section>
+    </div>
+    <section class="Category">
+      <a href="Working holiday-jp.html">Working holiday</a>
+      <a href="Career history-jp.html">Career history</a>
+      <a href="Travel-jp.html">Travel</a>
+      <a href="Diary-jp.html">Diary</a>
+    </section>
+  </header>
+
+  <main class="main-content">
+    <div>
+      <section class="description">
+        <h3>――「今一番挫折を感じていることは？」</h3>
+        <p>最近よく聞かれる質問なんだけど、頭の中にはたくさんの小さなエピソードがよぎって…でも結局「ワーキングホリデーの一年間かな」って答えてる（笑）。</p>
+        <p>ワーホリを始めたばかりの頃、当時N3レベルだった私は、学んだ日本語を会話でうまく使えなくて、相手が何を言ってるのか全然聞き取れなかったし、自分の気持ちもちゃんと伝えられなかった。結果、気まずい空気になったり、笑ってごまかしたり…そんなことばっかりで、今思えば最悪だったなぁ。</p>
+        <p>もっと力をつけたくて短期の語学学校に通って、N2を取ったあとも、職場では文法や言葉の使い方を間違えて誤解を招いたり、なかなか心の距離が縮まらなかったり…。簡単じゃなかった。</p>
+        <p>やっとの思いで“入場券”みたいなものを手に入れた今でも、経験不足や「忠誠心が低い」とかで前に進めずに落とされることもある。自分の決断に責任を持ちたくない気持ちと、同じ場所でグルグル悩んでる自分がいて、すごくもどかしい。</p>
+        <p>正直、思うようにいかないことなんて日常茶飯事で、サボりたくなることもあるし、文句も言うし、他人の努力を見ると逆に自信なくしたりもする。</p>
+        <p>でも、ちょっと休むくらい全然いいんだと思う。挫折って、きっともっといい方向に進むための道しるべ。もうどうしようもないときは、思いきり「くそーーーっ！！！」って叫べばOK（笑）。本当に、それだけでちょっとスッキリするよ。</p>
+      </section>
+      <section class="photo">
+        <img src="DIARY/diary01-1.jpg" alt="tomare1">
+        <p>2021.06.15✏️</p>
+      </section>
+    </div>
+  </main>
+
+  <main class="main-category">
+    <section>
+      <a href="index-jp.html">Home</a>
+    </section>
+    <section>
+      <a href="Working holiday-jp.html">Working holiday</a>
+    </section>
+    <section>
+      <a href="Career history-jp.html">Career history</a>
+    </section>
+    <section>
+      <a href="Travel-jp.html">Travel</a>
+    </section>
+    <section>
+      <a href="diary1-jp.html">Diary</a>
+    </section>
+  </main>
+
+  <!-- 箭頭 -->
+  <a href="#" id="back-to-top" class="back-to-top"><img src="箭頭-Photoroom.png" alt="箭頭" width="48px" height="48px"></a>
+  
+  <script>
+    window.addEventListener("scroll", function() {
+        let backToTop = document.getElementById("back-to-top");
+        if (window.scrollY > 200) {  
+            backToTop.classList.add("show");
+        } else {
+            backToTop.classList.remove("show");
+        }
+    });
+</script>
+
+  <footer>
+    <address>
+      <a href="mailto:ivy4320@yahoo.com.tw" target="_blank"><img src="mail-Photoroom.png" alt="MAIL" width="26" height="26"></a>
+      <a href="https://www.instagram.com/xiuoo_/" target="_blank" ><img src="IG-Photoroom.png" alt="IG" width="26" height="26"></a>
+    </address>
+    <small>(c) xiuoo_</small>
+  </footer>
+  
+  <script>
+    const toggleBtn = document.getElementById("languageToggle");
+    const menu = document.getElementById("languageMenu");
+  
+    toggleBtn.addEventListener("click", () => {
+      // 切換顯示狀態
+      menu.classList.toggle("show");
+    });
+  
+    function switchLanguage(lang) {
+      document.getElementById("languageToggle").textContent = lang + " ☰";
+      menu.classList.remove("show");
+      // ✅ 若要切換語言實際導頁可在這裡加上：
+      // window.location.href = lang === '日本語' ? 'jp.html' : 'tw.html';
+    }
+  </script>
+  
+</body>
+</html>
