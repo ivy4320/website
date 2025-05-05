@@ -32,6 +32,32 @@
     </section>
   </header>
 
+<!-- 左側小視窗 -->
+  <div id="sidebar">
+    <div id="sidebar-header">
+      <button id="close-btn">&minus;</button>
+      <a href="info.html">打工度假申請流程</a>
+      <!-- <span>打工度假申請資訊</span> -->
+    </div>
+  </div>
+
+  <!-- 重新打開小視窗的按鈕 -->
+  <button id="open-btn" style="display:none; position: fixed; top: 350px; right: 0px; z-index: 9999;">💡</button>
+
+  <script>
+    // 關閉小視窗
+  document.getElementById('close-btn').addEventListener('click', function() {
+    document.getElementById('sidebar').style.display = 'none';
+    document.getElementById('open-btn').style.display = 'block'; // 顯示「打開」按鈕
+});
+
+// 打開小視窗
+  document.getElementById('open-btn').addEventListener('click', function() {
+    document.getElementById('sidebar').style.display = 'block';
+    document.getElementById('open-btn').style.display = 'none'; // 隱藏「打開」按鈕
+});
+  </script>
+  
   <main class="main-content">
     <p>
       打工度假的故事就從靜岡「伊豆稻取」開始說起...<br>中途為了跨出語言的高牆，包袱款款前往東京，<br>同時在夢想中的UNIQLO打工，展開憧憬已久的日本生活♡
@@ -383,6 +409,9 @@
   </main>
 
   <main class="main-category">
+    <section>
+      <a href="index.html">Home</a>
+    </section>
     <section>
       <a href="Working holiday.html">Working holiday</a>
     </section>
